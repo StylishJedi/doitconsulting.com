@@ -162,6 +162,10 @@ body::after {
     text-transform: uppercase;
     letter-spacing: 3px;
     animation: titlePulse 2s ease-in-out infinite;
+    position: relative;
+    z-index: 100;
+    padding: 0 450px;
+    max-width: none;
 }
 
 @keyframes titlePulse {
@@ -180,6 +184,9 @@ body::after {
     color: #ff6b35;
     margin-bottom: 0.5rem;
     animation: blink 1.5s infinite;
+    position: relative;
+    z-index: 100;
+    padding: 0 450px;
 }
 
 @keyframes blink {
@@ -191,6 +198,9 @@ body::after {
     font-size: 1rem;
     color: #00d4ff;
     margin-bottom: 2rem;
+    position: relative;
+    z-index: 100;
+    padding: 0 450px;
 }
 
 .hero-cta {
@@ -199,6 +209,9 @@ body::after {
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 2rem;
+    position: relative;
+    z-index: 100;
+    padding: 0 450px;
 }
 
 .cta-btn-primary {
@@ -248,10 +261,11 @@ body::after {
 .radar-container {
     position: absolute;
     top: 50%;
-    right: 10%;
+    right: 5%;
     transform: translateY(-50%);
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
+    z-index: 50;
 }
 
 .radar-circle {
@@ -311,16 +325,18 @@ body::after {
 /* Terminal Component */
 .terminal {
     position: absolute;
-    bottom: 20%;
-    left: 10%;
-    width: 400px;
-    height: 200px;
-    background: rgba(0, 0, 0, 0.9);
+    bottom: 15%;
+    left: 2%;
+    width: 380px;
+    height: 180px;
+    background: rgba(0, 0, 0, 0.95);
     border: 1px solid #00ff41;
     padding: 1rem;
     font-family: 'Courier New', monospace;
     font-size: 0.8rem;
     overflow: hidden;
+    z-index: 50;
+    backdrop-filter: blur(5px);
 }
 
 .terminal-header {
@@ -356,12 +372,14 @@ body::after {
 /* System Stats Panel */
 .stats-panel {
     position: absolute;
-    top: 20%;
-    left: 10%;
-    width: 300px;
-    background: rgba(0, 0, 0, 0.9);
+    top: 25%;
+    left: 2%;
+    width: 280px;
+    background: rgba(0, 0, 0, 0.95);
     border: 1px solid #00ff41;
     padding: 1rem;
+    z-index: 50;
+    backdrop-filter: blur(5px);
 }
 
 .stats-header {
@@ -976,10 +994,51 @@ body::after {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .hero-title { font-size: 2rem; }
+    .hero-title { 
+        font-size: 2rem; 
+        padding: 0 20px;
+    }
+    .hero-subtitle {
+        padding: 0 20px;
+    }
+    .hero-status {
+        padding: 0 20px;
+    }
+    .hero-cta {
+        padding: 0 20px;
+    }
     .radar-container { display: none; }
-    .terminal { width: 300px; }
-    .stats-panel { width: 250px; }
+    .terminal { display: none; }
+    .stats-panel { display: none; }
+}
+
+@media (max-width: 1024px) {
+    .hero-title { 
+        padding: 0 320px;
+    }
+    .hero-subtitle {
+        padding: 0 320px;
+    }
+    .hero-status {
+        padding: 0 320px;
+    }
+    .hero-cta {
+        padding: 0 320px;
+    }
+    .stats-panel { 
+        width: 250px; 
+        left: 1%;
+    }
+    .terminal { 
+        width: 300px; 
+        left: 1%;
+    }
+    .radar-container {
+        width: 150px;
+        height: 150px;
+        right: 2%;
+    }
+}
     
     .deploy-content {
         grid-template-columns: 1fr;
