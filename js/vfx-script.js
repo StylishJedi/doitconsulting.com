@@ -61,7 +61,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Start matrix effect
+    console.log('Starting Matrix Rain Effect');
     createMatrixRain();
+    console.log('Matrix Rain Effect Started');
     
     // Recreate on resize
     window.addEventListener('resize', () => {
