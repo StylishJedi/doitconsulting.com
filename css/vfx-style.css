@@ -129,6 +129,40 @@ body::after {
     background: rgba(0, 255, 65, 0.1);
 }
 
+/* Mobile Navigation Toggle */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: #00ff41;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
 /* Hero Section - Command Center */
 .hero {
     height: 100vh;
@@ -1029,6 +1063,39 @@ body::after {
     .nav-logo {
         gap: 15px;
     }
+    
+    /* Show hamburger menu on mobile */
+    .nav-toggle {
+        display: flex;
+    }
+    
+    /* Hide/show navigation menu on mobile */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.95);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 255, 65, 0.2);
+        z-index: 1999;
+        padding: 2rem 0;
+        backdrop-filter: blur(10px);
+        border-top: 2px solid #00ff41;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-link {
+        margin: 0.5rem 0;
+        font-size: 1.1rem;
+        display: block;
+        padding: 1rem 2rem;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -1080,10 +1147,6 @@ body::after {
     
     .contact-methods {
         flex-direction: column;
-    }
-    
-    .nav-menu {
-        display: none;
     }
     
     .operations-grid {
