@@ -36,6 +36,24 @@ body {
     align-items: center;
 }
 
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text {
+    color: #0544A4;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
 .nav-logo h2 {
     color: #0544A4;
     font-weight: 600;
