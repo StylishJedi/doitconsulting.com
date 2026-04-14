@@ -28,7 +28,7 @@ git init
 git add .
 git commit -m "Initial website upload"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/doitconsulting-website.git
+git remote add origin https://github.com/StylishJedi/doitconsulting-website.git
 git push -u origin main
 ```
 
@@ -43,7 +43,7 @@ git push -u origin main
 
 ### 4. Access Your Website
 
-- Your website will be available at: `https://YOUR_USERNAME.github.io/doitconsulting-website`
+- Your website will be available at: `https://StylishJedi.github.io/doitconsulting-website`
 - It may take 5-10 minutes to deploy initially
 - GitHub will show you the URL once it's ready
 
@@ -67,7 +67,7 @@ In your GoDaddy DNS management:
   - 185.199.111.153
 
 **For www subdomain:**
-- Add **CNAME Record**: `www` pointing to `YOUR_USERNAME.github.io`
+- Add **CNAME Record**: `www` pointing to `StylishJedi.github.io`
 
 ### 3. Verify Domain
 - Create a file called `CNAME` in your repository root

@@ -36,10 +36,11 @@ The website is fully responsive and optimized for:
 
 ## 🔧 Setup Instructions
 
-1. **Fork this repository** to your GitHub account
-2. **Enable GitHub Pages** in repository settings
-3. **Set source** to "Deploy from a branch" and select "main"
-4. **Custom domain** (optional): Add your domain in settings
+1. **Create repository** at https://github.com/StylishJedi/doitconsulting-website
+2. **Upload these files** to your new repository
+3. **Enable GitHub Pages** in repository settings
+4. **Set source** to "Deploy from a branch" and select "main"
+5. **Custom domain** (optional): Point doitconsulting.com to GitHub Pages
 
 ## 📞 Contact Information
 
