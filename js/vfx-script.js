@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     // Temporarily update form title to show secure connection
                     const formTitle = contactSection.querySelector('h3');
-                    if (formTitle && formTitle.textContent === 'REQUEST TACTICAL ASSESSMENT') {
+                    if (formTitle && formTitle.textContent === 'Get a Free Consultation') {
                         const originalTitle = formTitle.textContent;
                         formTitle.textContent = '🔒 SECURE CHANNEL ESTABLISHED';
                         formTitle.style.color = '#00ff41';
@@ -219,19 +219,19 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Simple validation
             if (!name || !email || !phone || !message) {
-                alert('🚨 TRANSMISSION FAILED: All fields required for secure communication');
+                alert('⚠️ Please fill in all fields to submit your request.');
                 return;
             }
             
             // Email validation
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
-                alert('⚠️ INVALID COMM CHANNEL: Please enter a valid email address');
+                alert('⚠️ Please enter a valid email address.');
                 return;
             }
             
             // Success message
-            alert('✅ MESSAGE TRANSMITTED: Your tactical assessment request has been received. Response incoming within 24 hours.');
+            alert('✅ Thank you! Your consultation request has been received. We\'ll get back to you within 24 hours.');
             this.reset();
         });
     }

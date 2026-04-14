@@ -1584,7 +1584,6 @@ body::after {
 .cyber-form input::placeholder,
 .cyber-form textarea::placeholder {
     color: #666;
-    text-transform: uppercase;
 }
 
 .cyber-form input:focus,
