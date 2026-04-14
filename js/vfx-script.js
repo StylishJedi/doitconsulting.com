@@ -1,6 +1,75 @@
 // VFX Tech Lab Interactive Script
 document.addEventListener('DOMContentLoaded', function() {
     
+    // Matrix Digital Rain Effect
+    function createMatrixRain() {
+        const matrixContainer = document.getElementById('matrixRain');
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?`~';
+        const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
+        const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        const nums = '0123456789';
+        
+        const alphabet = chars + katakana + latin + nums;
+        
+        const fontSize = 12;
+        const columns = Math.floor(window.innerWidth / fontSize);
+        
+        function createColumn() {
+            const column = document.createElement('div');
+            column.className = 'matrix-column';
+            
+            // Random position
+            column.style.left = Math.random() * window.innerWidth + 'px';
+            
+            // Random speed (3-8 seconds)
+            const duration = Math.random() * 5 + 3;
+            column.style.animationDuration = duration + 's';
+            
+            // Random delay
+            column.style.animationDelay = Math.random() * 2 + 's';
+            
+            // Create random string of characters
+            let text = '';
+            const length = Math.floor(Math.random() * 20) + 10;
+            for (let i = 0; i < length; i++) {
+                text += alphabet[Math.floor(Math.random() * alphabet.length)] + '\n';
+            }
+            column.textContent = text;
+            
+            // Random chance for bright column
+            if (Math.random() > 0.85) {
+                column.classList.add('bright');
+            }
+            
+            matrixContainer.appendChild(column);
+            
+            // Remove after animation
+            setTimeout(() => {
+                if (column.parentNode) {
+                    column.parentNode.removeChild(column);
+                }
+            }, (duration + 2) * 1000);
+        }
+        
+        // Create initial columns
+        for (let i = 0; i < Math.floor(columns / 3); i++) {
+            setTimeout(createColumn, Math.random() * 2000);
+        }
+        
+        // Continuously create new columns
+        setInterval(createColumn, 150);
+    }
+    
+    // Start matrix effect
+    createMatrixRain();
+    
+    // Recreate on resize
+    window.addEventListener('resize', () => {
+        const matrixContainer = document.getElementById('matrixRain');
+        matrixContainer.innerHTML = '';
+        setTimeout(createMatrixRain, 100);
+    });
+    
     // Terminal Feed System
     const terminalContent = document.getElementById('terminalContent');
     const terminalMessages = [
