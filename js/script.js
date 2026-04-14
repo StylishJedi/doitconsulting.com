@@ -165,3 +165,48 @@ function setFormLoading(form, loading) {
         submitBtn.textContent = 'Send Message';
     }
 }
+
+// Popup Modal Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const urgentBtn = document.getElementById('urgentBtn');
+    const popupOverlay = document.getElementById('popupOverlay');
+    const popupClose = document.getElementById('popupClose');
+    const popupContact = document.getElementById('popupContact');
+
+    // Show popup when urgent button is clicked
+    urgentBtn.addEventListener('click', function() {
+        popupOverlay.classList.add('active');
+    });
+
+    // Close popup when X is clicked
+    popupClose.addEventListener('click', function() {
+        popupOverlay.classList.remove('active');
+    });
+
+    // Close popup when clicking outside the modal
+    popupOverlay.addEventListener('click', function(e) {
+        if (e.target === popupOverlay) {
+            popupOverlay.classList.remove('active');
+        }
+    });
+
+    // Close popup and scroll to contact when Email Us is clicked
+    popupContact.addEventListener('click', function() {
+        popupOverlay.classList.remove('active');
+    });
+
+    // Auto-show popup after 10 seconds (like GoDaddy's behavior)
+    setTimeout(function() {
+        if (!sessionStorage.getItem('popupShown')) {
+            popupOverlay.classList.add('active');
+            sessionStorage.setItem('popupShown', 'true');
+        }
+    }, 10000);
+
+    // Close popup with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            popupOverlay.classList.remove('active');
+        }
+    });
+});
