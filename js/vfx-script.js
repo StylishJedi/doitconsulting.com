@@ -295,14 +295,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Smooth scrolling for nav links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        console.log('Found navigation link:', anchor.textContent.trim());
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            console.log('Navigation clicked:', this.textContent.trim());
+            const targetHref = this.getAttribute('href');
+            const target = document.querySelector(targetHref);
+            console.log('Scrolling to target:', targetHref, target);
             if (target) {
                 target.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
                 });
+                
+                // Add visual feedback
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
+            } else {
+                console.error('Target not found:', targetHref);
             }
         });
     });
