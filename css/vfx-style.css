@@ -89,7 +89,12 @@ body::after {
     width: auto;
     object-fit: contain;
     background: transparent;
-    filter: none;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 16px rgba(255, 255, 255, 0.3));
+    transition: filter 0.3s ease;
+}
+
+.logo-img:hover {
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 24px rgba(255, 255, 255, 0.4));
 }
 
 .logo-text {
