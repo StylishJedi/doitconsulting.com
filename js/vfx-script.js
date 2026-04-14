@@ -127,7 +127,67 @@ document.addEventListener('DOMContentLoaded', function() {
     if (initiateChatBtn) {
         initiateChatBtn.addEventListener('click', function(e) {
             e.preventDefault();
-            emergencyModal.style.display = 'flex';
+            
+            // Add visual feedback
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 150);
+            
+            // Show system alert for secure connection
+            const alertDiv = document.createElement('div');
+            alertDiv.className = 'system-alert';
+            alertDiv.textContent = '🔒 Establishing secure communication channel...';
+            alertDiv.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                background: rgba(0, 255, 65, 0.1);
+                border: 1px solid #00ff41;
+                color: #00ff41;
+                padding: 1rem;
+                border-radius: 5px;
+                z-index: 3000;
+                animation: slideInRight 0.5s ease-out;
+                font-family: 'Courier New', monospace;
+                backdrop-filter: blur(5px);
+            `;
+            document.body.appendChild(alertDiv);
+            
+            // Add secure connection effect to contact form
+            setTimeout(() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                    contactSection.classList.add('secure-connection-active');
+                    
+                    // Temporarily update form title to show secure connection
+                    const formTitle = contactSection.querySelector('h3');
+                    if (formTitle && formTitle.textContent === 'REQUEST TACTICAL ASSESSMENT') {
+                        const originalTitle = formTitle.textContent;
+                        formTitle.textContent = '🔒 SECURE CHANNEL ESTABLISHED';
+                        formTitle.style.color = '#00ff41';
+                        
+                        setTimeout(() => {
+                            formTitle.textContent = originalTitle;
+                            formTitle.style.color = '';
+                        }, 3000);
+                    }
+                    
+                    setTimeout(() => {
+                        contactSection.classList.remove('secure-connection-active');
+                    }, 2000);
+                }
+            }, 800);
+            
+            // Remove alert after scroll
+            setTimeout(() => {
+                if (alertDiv.parentNode) {
+                    alertDiv.style.animation = 'slideOutRight 0.5s ease-out';
+                    setTimeout(() => {
+                        document.body.removeChild(alertDiv);
+                    }, 500);
+                }
+            }, 2000);
         });
     }
 
