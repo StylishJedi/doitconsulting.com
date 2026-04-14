@@ -59,13 +59,14 @@ body::after {
 /* Navigation - Command Bar */
 .navbar {
     background: rgba(0, 0, 0, 0.9);
-    border-bottom: 2px solid #00ff41;
-    padding: 1rem 0;
+    border-bottom: 3px solid #00ff41;
+    padding: 1.5rem 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 2000;
     backdrop-filter: blur(10px);
+    min-height: 90px;
 }
 
 .nav-container {
@@ -80,11 +81,11 @@ body::after {
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
 }
 
 .logo-img {
-    height: 45px;
+    height: 60px;
     width: auto;
     object-fit: contain;
     background: transparent;
@@ -93,10 +94,11 @@ body::after {
 
 .logo-text {
     color: #00ff41;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     text-shadow: 0 0 10px #00ff41;
     animation: textGlow 2s ease-in-out infinite alternate;
+    letter-spacing: 1px;
 }
 
 @keyframes textGlow {
@@ -140,6 +142,7 @@ body::after {
     text-align: center;
     position: relative;
     overflow: hidden;
+    padding-top: 90px;
 }
 
 .hero::before {
@@ -1013,6 +1016,19 @@ body::after {
     .radar-container { display: none; }
     .terminal { display: none; }
     .stats-panel { display: none; }
+    .logo-img {
+        height: 45px;
+    }
+    .logo-text {
+        font-size: 1.6rem;
+    }
+    .navbar {
+        padding: 1rem 0;
+        min-height: 70px;
+    }
+    .nav-logo {
+        gap: 15px;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -1040,6 +1056,16 @@ body::after {
         width: 150px;
         height: 150px;
         right: 2%;
+    }
+    .logo-img {
+        height: 50px;
+    }
+    .logo-text {
+        font-size: 1.8rem;
+    }
+    .navbar {
+        padding: 1.2rem 0;
+        min-height: 80px;
     }
 }
     
