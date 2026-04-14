@@ -144,6 +144,38 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Contact Form Handling
+    const contactForm = document.querySelector('.cyber-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const phone = formData.get('phone');
+            const message = formData.get('message');
+            
+            // Simple validation
+            if (!name || !email || !phone || !message) {
+                alert('🚨 TRANSMISSION FAILED: All fields required for secure communication');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('⚠️ INVALID COMM CHANNEL: Please enter a valid email address');
+                return;
+            }
+            
+            // Success message
+            alert('✅ MESSAGE TRANSMITTED: Your tactical assessment request has been received. Response incoming within 24 hours.');
+            this.reset();
+        });
+    }
+
     // Smooth scrolling for nav links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
