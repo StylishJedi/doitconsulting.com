@@ -84,8 +84,11 @@ body::after {
 }
 
 .logo-img {
-    height: 40px;
-    filter: brightness(0) saturate(100%) invert(60%) sepia(93%) saturate(4315%) hue-rotate(92deg);
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+    background: transparent;
+    filter: none;
 }
 
 .logo-text {
