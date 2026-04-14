@@ -272,7 +272,65 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(alertStyles);
 
+    // Background rotation system
+    const backgrounds = [
+        'url("images/bg-cyberpunk.jpg")',
+        'url("images/bg-danger.jpg")',
+        'url("images/bg-hightech.jpg")'
+    ];
+    
+    let currentBg = 0;
+    
+    // Optional: Rotate hero background every 30 seconds
+    function rotateBackground() {
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            currentBg = (currentBg + 1) % backgrounds.length;
+            const newGradient = currentBg === 0 ? 
+                'linear-gradient(135deg, rgba(0,10,20,0.8) 0%, rgba(0,0,0,0.9) 100%)' :
+                currentBg === 1 ? 
+                'linear-gradient(135deg, rgba(255,107,53,0.2) 0%, rgba(0,0,0,0.8) 100%)' :
+                'linear-gradient(135deg, rgba(0,212,255,0.2) 0%, rgba(0,0,0,0.8) 100%)';
+            
+            hero.style.background = `${newGradient}, ${backgrounds[currentBg]} center/cover`;
+        }
+    }
+    
+    // Uncomment to enable background rotation
+    // setInterval(rotateBackground, 30000);
+    
+    // Enhanced glitch effects
+    function createGlitchEffect() {
+        const glitchElements = document.querySelectorAll('.glitch-effect');
+        glitchElements.forEach(element => {
+            if (Math.random() < 0.1) { // 10% chance every call
+                element.style.opacity = Math.random() * 0.5 + 0.1;
+                element.style.transform = `translateX(${Math.random() * 20 - 10}px)`;
+                
+                setTimeout(() => {
+                    element.style.opacity = '';
+                    element.style.transform = '';
+                }, 100);
+            }
+        });
+    }
+    
+    setInterval(createGlitchEffect, 200);
+    
+    // Dynamic color shifting for circuit overlays
+    function shiftCircuitColors() {
+        const circuits = document.querySelectorAll('.circuit-overlay');
+        circuits.forEach(circuit => {
+            const hue = Math.random() * 120; // Green to cyan range
+            circuit.style.filter = `hue-rotate(${hue}deg) brightness(${0.8 + Math.random() * 0.4})`;
+        });
+    }
+    
+    setInterval(shiftCircuitColors, 3000);
+
     console.log('🚀 VFX Tech Lab systems initialized');
     console.log('🛡️ Security protocols active');
     console.log('📡 Global monitoring online');
+    console.log('🎨 Dynamic backgrounds loaded');
+    console.log('✨ Visual effects systems online');
 });
