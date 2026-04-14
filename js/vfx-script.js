@@ -119,10 +119,8 @@ document.addEventListener('DOMContentLoaded', function() {
         animateMap();
     }
 
-    // Emergency Modal
-    const emergencyModal = document.getElementById('emergencyModal');
+    // Chat button functionality
     const initiateChatBtn = document.getElementById('initiateChatBtn');
-    const modalCloseButtons = document.querySelectorAll('.modal-close, #modalClose2');
 
     if (initiateChatBtn) {
         initiateChatBtn.addEventListener('click', function(e) {
@@ -191,18 +189,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    modalCloseButtons.forEach(btn => {
-        btn.addEventListener('click', function() {
-            emergencyModal.style.display = 'none';
-        });
-    });
 
-    // Close modal on background click
-    emergencyModal.addEventListener('click', function(e) {
-        if (e.target === emergencyModal) {
-            emergencyModal.style.display = 'none';
-        }
-    });
 
     // Contact Form Handling
     const contactForm = document.querySelector('.cyber-form');
@@ -214,11 +201,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const formData = new FormData(this);
             const name = formData.get('name');
             const email = formData.get('email');
-            const phone = formData.get('phone');
             const message = formData.get('message');
             
             // Simple validation
-            if (!name || !email || !phone || !message) {
+            if (!name || !email || !message) {
                 alert('⚠️ Please fill in all fields to submit your request.');
                 return;
             }
@@ -319,13 +305,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Auto-trigger emergency modal after 15 seconds (like the old popup)
-    setTimeout(() => {
-        if (!sessionStorage.getItem('emergencyShown')) {
-            emergencyModal.style.display = 'flex';
-            sessionStorage.setItem('emergencyShown', 'true');
-        }
-    }, 15000);
+
 
     // Add some random system alerts
     const alerts = [
