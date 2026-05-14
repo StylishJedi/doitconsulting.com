@@ -173,6 +173,15 @@
             z-index: 20;
         }
         
+        /* Make logo clickable while preserving hover */
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
         footer {
             background: rgba(0, 0, 0, 0.8);
             border-top: 1px solid #00ff41;
@@ -216,10 +225,10 @@
     <!-- Command Bar Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
+            <a href="index.html" class="nav-logo">
                 <img src="images/logo.png" alt="do-IT Consulting" class="logo-img">
                 <span class="logo-text">do-IT Consulting</span>
-            </div>
+            </a>
             <ul class="nav-menu">
                 <li><a href="index.html#status" class="nav-link">STATUS</a></li>
                 <li><a href="index.html#operations" class="nav-link">SERVICES</a></li>
