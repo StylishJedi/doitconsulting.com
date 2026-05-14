@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - do-IT Consulting</title>
+    <meta name="description" content="Privacy Policy for do-IT Consulting. Learn how we protect your data and information.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- VFX Stylesheet -->
+    <link rel="stylesheet" href="css/vfx-style.css">
+    
+    <style>
+        .privacy-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .privacy-header {
+            background: linear-gradient(135deg, rgba(0, 255, 65, 0.1), rgba(0, 150, 136, 0.1));
+            border: 2px solid #00ff41;
+            border-radius: 4px;
+            padding: 40px 30px;
+            margin-bottom: 40px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+        }
+        
+        .privacy-header h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            color: #00ff41;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px #00ff41;
+        }
+        
+        .privacy-header p {
+            color: #00cccc;
+            font-size: 1rem;
+        }
+        
+        .toc {
+            background: rgba(0, 255, 65, 0.05);
+            border: 1px solid #00ff41;
+            border-radius: 4px;
+            padding: 25px;
+            margin-bottom: 40px;
+            box-shadow: inset 0 0 10px rgba(0, 255, 65, 0.1);
+        }
+        
+        .toc h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: #00ff41;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        
+        .toc ul {
+            list-style: none;
+        }
+        
+        .toc li {
+            margin: 8px 0;
+        }
+        
+        .toc a {
+            color: #00cccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .toc a:hover {
+            color: #00ff41;
+            text-shadow: 0 0 5px #00ff41;
+        }
+        
+        .content {
+            background: rgba(10, 10, 10, 0.9);
+            border: 1px solid #00ff41;
+            border-radius: 4px;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
+        }
+        
+        .content h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.6rem;
+            margin: 40px 0 20px 0;
+            color: #00ff41;
+            border-bottom: 2px solid #00ff41;
+            padding-bottom: 10px;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+        }
+        
+        .content h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin: 25px 0 15px 0;
+            color: #00cccc;
+            text-transform: uppercase;
+        }
+        
+        .content p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: #e0e0e0;
+        }
+        
+        .content ul, .content ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .content li {
+            margin-bottom: 10px;
+            color: #e0e0e0;
+        }
+        
+        .highlight {
+            background: rgba(0, 150, 136, 0.15);
+            border-left: 4px solid #00cccc;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            color: #00cccc;
+            box-shadow: inset 0 0 10px rgba(0, 150, 136, 0.1);
+        }
+        
+        .highlight strong {
+            color: #00ff41;
+        }
+        
+        .last-updated {
+            color: #00cccc;
+            font-style: italic;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #00ff41;
+        }
+        
+        .contact-section {
+            background: rgba(0, 255, 65, 0.05);
+            border: 1px solid #00cccc;
+            padding: 20px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        
+        .contact-section a {
+            color: #00cccc;
+            text-decoration: none;
+        }
+        
+        .contact-section a:hover {
+            color: #00ff41;
+            text-shadow: 0 0 5px #00ff41;
+        }
+        
+        /* Navbar override for privacy page */
+        .navbar {
+            position: relative;
+            z-index: 20;
+        }
+        
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            border-top: 1px solid #00ff41;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            color: #00cccc;
+            position: relative;
+            z-index: 10;
+        }
+        
+        footer a {
+            color: #00ff41;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-shadow: 0 0 5px #00ff41;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .privacy-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .toc {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Matrix Digital Rain Background -->
+    <div class="matrix-rain" id="matrixRain"></div>
+    
+    <!-- Command Bar Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logo.png" alt="do-IT Consulting" class="logo-img">
+                <span class="logo-text">do-IT Consulting</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#status" class="nav-link">STATUS</a></li>
+                <li><a href="index.html#operations" class="nav-link">SERVICES</a></li>
+                <li><a href="index.html#mission" class="nav-link">MISSION</a></li>
+                <li><a href="index.html#threats" class="nav-link">NETWORK</a></li>
+                <li><a href="index.html#contact" class="nav-link">CONTACT</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="privacy-container">
+        <div class="privacy-header">
+            <h1><i class="fas fa-shield-alt"></i> Privacy Policy</h1>
+            <p>Your data security is our highest priority</p>
+        </div>
+
+        <div class="toc">
+            <h2>$ access --navigation</h2>
+            <ul>
+                <li><a href="#overview">▸ Overview</a></li>
+                <li><a href="#information-we-collect">▸ Information We Collect</a></li>
+                <li><a href="#how-we-use">▸ How We Use Information</a></li>
+                <li><a href="#legal-basis">▸ Legal Basis for Processing</a></li>
+                <li><a href="#data-sharing">▸ Data Sharing & Disclosure</a></li>
+                <li><a href="#data-retention">▸ Data Retention</a></li>
+                <li><a href="#data-security">▸ Data Security</a></li>
+                <li><a href="#your-rights">▸ Your Rights</a></li>
+                <li><a href="#contact">▸ Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <section id="overview">
+                <h2>1. Overview</h2>
+                <p>do-IT Consulting ("Company," "we," "us," or "our") operates the website doitconsulting.com (the "Service"). This Privacy Policy explains how we collect, use, disclose, and otherwise process personal information in connection with our website, services, and business operations.</p>
+                <p>This Privacy Policy applies to information we collect from:</p>
+                <ul>
+                    <li>Visitors to our website</li>
+                    <li>Current and prospective clients</li>
+                    <li>Users who interact with our services</li>
+                    <li>Participants in our consultations and assessments</li>
+                </ul>
+                <p>By accessing or using our Service, you acknowledge that you have read, understood, and agree to be bound by all of its terms.</p>
+            </section>
+
+            <section id="information-we-collect">
+                <h2>2. Information We Collect</h2>
+                
+                <h3>2.1 Information You Provide Directly</h3>
+                <p>We collect information that you voluntarily provide to us, including:</p>
+                <ul>
+                    <li><strong>Contact Information:</strong> Name, email address, phone number, company name, and physical address when you request a consultation, fill out a contact form, or subscribe to communications</li>
+                    <li><strong>Service Information:</strong> Details about your IT infrastructure, systems, and needs that you share during assessments and consultations</li>
+                    <li><strong>Account Information:</strong> Credentials and account settings if you create an account on our platform</li>
+                    <li><strong>Communication Data:</strong> Messages, inquiries, and feedback you send us via email, contact forms, or chat</li>
+                    <li><strong>Payment Information:</strong> Billing address and payment details (processed securely through third-party payment processors)</li>
+                </ul>
+
+                <h3>2.2 Information Collected Automatically</h3>
+                <p>When you visit our website, we automatically collect certain information about your device and interaction with our Service:</p>
+                <ul>
+                    <li><strong>Log Data:</strong> IP address, browser type, pages visited, time and date stamps, and referring URL</li>
+                    <li><strong>Device Information:</strong> Device type, operating system, and unique device identifiers</li>
+                    <li><strong>Usage Information:</strong> How you interact with our website, including the features you use and the content you view</li>
+                    <li><strong>Cookies and Similar Technologies:</strong> We use cookies and similar tracking technologies to enhance your experience and analyze website usage</li>
+                </ul>
+
+                <h3>2.3 Information from Third Parties</h3>
+                <p>We may receive information about you from:</p>
+                <ul>
+                    <li>Third-party service providers and partners</li>
+                    <li>Referrals from existing clients</li>
+                    <li>Public business records and databases</li>
+                </ul>
+            </section>
+
+            <section id="how-we-use">
+                <h2>3. How We Use Your Information</h2>
+                <p>We use the information we collect for various purposes, including:</p>
+                <ul>
+                    <li><strong>Service Delivery:</strong> Providing, maintaining, and improving our IT consulting services and technical support</li>
+                    <li><strong>Communication:</strong> Responding to your inquiries, sending updates about our services, and providing customer support</li>
+                    <li><strong>Client Relationships:</strong> Managing client accounts, processing requests, and maintaining ongoing service relationships</li>
+                    <li><strong>Marketing:</strong> Sending promotional materials and newsletters (only with your consent)</li>
+                    <li><strong>Business Analysis:</strong> Understanding usage patterns, improving our website, and conducting analytics</li>
+                    <li><strong>Legal Compliance:</strong> Complying with applicable laws, regulations, and legal obligations</li>
+                    <li><strong>Security:</strong> Detecting and preventing fraud, abuse, and security incidents</li>
+                    <li><strong>Personalization:</strong> Tailoring content and recommendations to your preferences</li>
+                </ul>
+
+                <div class="highlight">
+                    <strong>Note:</strong> We do not use your information for automated decision-making or profiling that would have significant legal effects on you.
+                </div>
+            </section>
+
+            <section id="legal-basis">
+                <h2>4. Legal Basis for Processing (GDPR)</h2>
+                <p>If you are in the European Economic Area (EEA), our legal basis for processing your personal information under the GDPR includes:</p>
+                <ul>
+                    <li><strong>Contractual Necessity:</strong> Processing necessary to perform services you've contracted with us for</li>
+                    <li><strong>Legitimate Interests:</strong> Our legitimate business interests in operating our services, improving our business, and preventing fraud</li>
+                    <li><strong>Consent:</strong> Your explicit consent for specific processing activities (e.g., marketing communications)</li>
+                    <li><strong>Legal Obligation:</strong> Compliance with applicable legal or regulatory requirements</li>
+                </ul>
+            </section>
+
+            <section id="data-sharing">
+                <h2>5. Data Sharing and Disclosure</h2>
+                
+                <h3>5.1 We May Share Your Information With:</h3>
+                <ul>
+                    <li><strong>Service Providers:</strong> Third-party vendors who assist us in delivering our services (e.g., cloud hosting providers, payment processors, communication platforms)</li>
+                    <li><strong>Business Partners:</strong> Partners with whom we provide joint services or integrated solutions</li>
+                    <li><strong>Legal Requirements:</strong> Government agencies, law enforcement, or courts when required by law or if we believe in good faith that disclosure is necessary</li>
+                    <li><strong>Business Transfers:</strong> In the event of merger, acquisition, bankruptcy, or sale of assets, your information may be transferred as part of that transaction</li>
+                </ul>
+
+                <h3>5.2 We Do NOT:</h3>
+                <ul>
+                    <li>Sell your personal information to third parties for marketing purposes</li>
+                    <li>Share your information without legal basis or your consent (except as required by law)</li>
+                    <li>Disclose confidential client information outside of our organization without authorization</li>
+                </ul>
+
+                <div class="highlight">
+                    <strong>Important:</strong> When we share information with service providers, we require them to maintain the same level of confidentiality and security as we do.
+                </div>
+            </section>
+
+            <section id="data-retention">
+                <h2>6. Data Retention</h2>
+                <p>We retain your personal information only for as long as necessary to:</p>
+                <ul>
+                    <li>Provide you with our services</li>
+                    <li>Comply with legal and regulatory obligations</li>
+                    <li>Resolve disputes and enforce our agreements</li>
+                    <li>Support our legitimate business interests</li>
+                </ul>
+                <p>Retention periods vary depending on the type of information and the purposes for which we use it. For example:</p>
+                <ul>
+                    <li><strong>Client Service Data:</strong> Retained for the duration of our relationship and for 3-7 years afterward for legal and accounting purposes</li>
+                    <li><strong>Marketing Communications:</strong> Retained until you unsubscribe</li>
+                    <li><strong>Website Analytics:</strong> Typically retained for 12-24 months</li>
+                </ul>
+                <p>When information is no longer needed, we securely delete or anonymize it unless retention is required by law.</p>
+            </section>
+
+            <section id="data-security">
+                <h2>7. Data Security</h2>
+                <p>We implement comprehensive technical, administrative, and physical security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. These measures include:</p>
+                <ul>
+                    <li>Encryption of data in transit (SSL/TLS) and at rest</li>
+                    <li>Secure authentication mechanisms and access controls</li>
+                    <li>Regular security audits and vulnerability assessments</li>
+                    <li>Employee training on data protection and privacy practices</li>
+                    <li>Limited access to personal information on a need-to-know basis</li>
+                    <li>Secure disposal of physical and digital records</li>
+                </ul>
+
+                <div class="highlight">
+                    <strong>Disclaimer:</strong> While we employ industry-standard security measures, no system is 100% secure. We cannot guarantee absolute security of your information. If a breach occurs, we will notify affected individuals as required by law.
+                </div>
+            </section>
+
+            <section id="your-rights">
+                <h2>8. Your Privacy Rights</h2>
+                
+                <h3>8.1 GDPR Rights (EEA Residents)</h3>
+                <p>If you are in the EEA, you have the following rights under the GDPR:</p>
+                <ul>
+                    <li><strong>Right of Access:</strong> Request a copy of the personal information we hold about you</li>
+                    <li><strong>Right to Rectification:</strong> Correct inaccurate or incomplete information</li>
+                    <li><strong>Right to Erasure:</strong> Request deletion of your information (subject to certain exceptions)</li>
+                    <li><strong>Right to Restrict Processing:</strong> Limit how we process your information</li>
+                    <li><strong>Right to Data Portability:</strong> Receive your information in a structured, portable format</li>
+                    <li><strong>Right to Object:</strong> Object to certain types of processing, including marketing communications</li>
+                    <li><strong>Right to Lodge a Complaint:</strong> File a complaint with your local data protection authority</li>
+                </ul>
+
+                <h3>8.2 CCPA Rights (California Residents)</h3>
+                <p>If you are a California resident, you have the following rights under the California Consumer Privacy Act (CCPA):</p>
+                <ul>
+                    <li><strong>Right to Know:</strong> Request what personal information is collected and how it's used</li>
+                    <li><strong>Right to Delete:</strong> Request deletion of collected information (with limited exceptions)</li>
+                    <li><strong>Right to Opt-Out:</strong> Opt out of the sale or sharing of personal information</li>
+                    <li><strong>Right to Correct:</strong> Request correction of inaccurate personal information</li>
+                    <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your privacy rights</li>
+                </ul>
+
+                <h3>8.3 How to Exercise Your Rights</h3>
+                <p>To exercise any of these rights, please contact us at:</p>
+                <div class="contact-section">
+                    <p><strong>Email:</strong> <a href="mailto:info@doitconsulting.com">info@doitconsulting.com</a></p>
+                    <p><strong>Location:</strong> Encino, CA</p>
+                </div>
+                <p>We will respond to your request within 30 days (or as required by applicable law). We may request verification of your identity to protect your privacy and security.</p>
+            </section>
+
+            <section id="contact">
+                <h2>9. Contact Us</h2>
+                <p>If you have questions about this Privacy Policy, concerns about our privacy practices, or wish to exercise your privacy rights, please contact us:</p>
+                <div class="contact-section">
+                    <p><strong>Email:</strong> <a href="mailto:info@doitconsulting.com">info@doitconsulting.com</a></p>
+                    <p><strong>Location:</strong> Encino, CA</p>
+                    <p><strong>Website:</strong> <a href="https://doitconsulting.com">doitconsulting.com</a></p>
+                </div>
+                <p>We will make every effort to respond to your inquiry within 30 days. If you are not satisfied with our response, you may have the right to lodge a complaint with your local data protection authority.</p>
+            </section>
+
+            <h2>10. Policy Updates</h2>
+            <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, and other factors. We will notify you of material changes by updating the date at the bottom of this page and, where required by law, by obtaining your consent.</p>
+
+            <div class="last-updated">
+                <p><strong>$ stat --last-modified</strong></p>
+                <p>Last Updated: May 14, 2026</p>
+                <p>Effective Date: May 14, 2026</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 do-IT Consulting. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="index.html">Command Center</a></p>
+    </footer>
+
+    <!-- VFX Scripts -->
+    <script src="js/vfx-script.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
